@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Party 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <!-- Links now point to #section-id instead of separate html files -->
+  <nav class="navbar">
+    <div class="logo">WELCOME PARTY</div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#program">Program</a>
+      <a href="#register">Register</a>
+      <a href="#activities">Activities</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- ===== HOME SECTION ===== -->
+  <section id="home">
+    <div class="hero">
+      <p class="kicker">FACULTY OF HIGHER INSSTITUTE OF ENGINEERING AND TECHNOLOGY - TOD</p>
+      <h1>Welcome Party<br />2026</h1>
+      <p class="subtitle">One night to meet your class, before the real journey begins.</p>
+      <a href="#register" class="btn">Register Now</a>
+
+      <div class="countdown">
+        <div class="countdown-box"><span id="days">00</span><small>Days</small></div>
+        <div class="countdown-box"><span id="hours">00</span><small>Hours</small></div>
+        <div class="countdown-box"><span id="minutes">00</span><small>Min</small></div>
+      </div>
+    </div>
+
+    <div class="chips">
+      <div class="chip">
+        <b>Date</b>
+        <p>Sunday, Oct 11</p>
+      </div>
+      <div class="chip">
+        <b>Time</b>
+        <p>9:00 AM</p>
+      </div>
+      <div class="chip">
+        <b>Venue</b>
+        <p>HIGHER INSSTITUTE OF ENGINEERING AND TECHNOLOGY - TOD</p>
+      </div>
+    </div>
+
+    <div class="expect">
+      <h3>What to expect</h3>
+      <div class="cards">
+        <div class="card">
+          <b>Before the hall</b>
+          <p>Games &amp; activities</p>
+        </div>
+        <div class="card">
+          <b>In hall</b>
+          <p>Recitation &amp; speeches</p>
+        </div>
+        <div class="card">
+          <b>A day to remember</b>
+          <p>Music &amp; photos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAM SECTION ===== -->
+  <section id="program">
+    <div class="mini-header">
+      <h2>Program</h2>
+      <p>Sunday, October 11</p>
+    </div>
+
+    <div class="timeline-section">
+      <p class="stage-label">Before the hall</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="time">8:30 AM</span>
+          <div class="timeline-content">
+            <b>Arrival &amp; check-in</b>
+            <p>Games, activities, glitter face paint</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="stage-label">Inside the hall</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <!-- <span class="time">6:00</span> -->
+          <div class="timeline-content"><b>Quran recitation</b></div>
+        </div>
+        <div class="timeline-item">
+          <!-- <span class="time">6:05</span> -->
+          <div class="timeline-content"><b>National anthem</b></div>
+        </div>
+        <div class="timeline-item">
+          <!-- <span class="time">6:10</span> -->
+          <div class="timeline-content"><b>CEO speech</b></div>
+        </div>
+        <div class="timeline-item">
+          <!-- <span class="time">6:20</span> -->
+          <div class="timeline-content"><b>Dean's speech</b></div>
+        </div>
+        <div class="timeline-item">
+          <!-- <span class="time">6:25</span> -->
+          <!-- <div class="timeline-content">
+            <b>Guest of honor</b>
+            <i>if attending</i>
+          </div>
+        </div>
+        <div class="timeline-item"> -->
+          <!-- <span class="time">6:30</span> -->
+          <div class="timeline-content"><b>Deputy deans' of the Institute speeche</b></div>
+        </div>
+        <div class="timeline-item">
+          <!-- <span class="time">6:40</span> -->
+          <div class="timeline-content"><b>October 6 War commemoration</b></div>
+        </div>
+        <div class="timeline-item">
+          <!-- <span class="time">6:50</span> -->
+          <div class="timeline-content">
+            <b>A theatrical performance</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGISTER SECTION ===== -->
+  <section id="register">
+    <div class="mini-header">
+      <h2>Register</h2>
+      <p>Seats are limited</p>
+    </div>
+
+    <div class="form-section">
+      <form id="registerForm" class="form-card">
+
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="e.g. Sara Ahmed" required />
+
+        <label for="department">Department</label>
+        <select id="department" name="department" required>
+
+          <option value="" disabled selected>Select department</option>
+          <option value="Preparatory Engineering">Preparatory Engineering</option>
+          <option value="Electronics &amp; Communicatins">Electronics &amp; Communicatins</option>
+          <option value="Architecture">Architecture</option>
+          <option value="Civil">Civil</option>
+        </select>
+
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="01xxxxxxxxx" required />
+
+        <label>Bringing friends?</label>
+        <div class="options">
+          <label class="option"><input type="radio" name="friends" value="0" checked /> No</label>
+          <label class="option"><input type="radio" name="friends" value="1" /> 1 friend</label>
+          <label class="option"><input type="radio" name="friends" value="2" /> 2 friends</label>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn">Confirm registration</button>
+        </div>
+      </form>
+
+      <!-- Hidden by default, shown by script.js after a successful submit -->
+      <div id="successMessage" class="success-box hidden">
+        You're on the list. See you Thursday.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVITIES SECTION ===== -->
+  <section id="activities">
+    <div class="mini-header">
+      <h2>Before the Hall</h2>
+      <p>Games &amp; activities from 5:00 PM</p>
+    </div>
+
+    <div class="activities-section">
+      <div class="activities-grid">
+        <div class="card wide">
+          <b>Face &amp; glitter art</b>
+          <p>Get a sparkle tattoo before you head in</p>
+        </div>
+        <div class="card wide">
+          <b>QR Code game</b>
+          <p>Scan the clues and follow the trail to find the hidden treasure</p>
+        </div>
+        <div class="card wide">
+          <b>Polaroid corner</b>
+          <p>Instant photos to keep</p>
+        </div>
+        <div class="card wide">
+          <b>Casino games</b>
+          <p>Try your luck,play fun casino-style games ,and collect points</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section id="gallery">
+    <div class="mini-header">
+      <h2>Gallery</h2>
+      <p>Moments worth keeping</p>
+    </div>
+
+    <!-- Replace each src="" with your own image path, e.g. "images/photo1.jpg" -->
+    <div class="gallery-section">
+      <div class="gallery-grid">
+        <img src="images/photo_2026-10-01_00-18-05.jpg" alt="Welcome party photo 1" class="gallery-photo" />
+        <img src="images/photo_2026-10-01_00-12-42.jpg" alt="Welcome party photo 2" class="gallery-photo" />
+        <img src="images/photo_2026-10-01_00-12-44.jpg" alt="Welcome party photo 3" class="gallery-photo" />
+        <img src="images/photo_2026-10-01_00-12-45.jpg" alt="Welcome party photo 4" class="gallery-photo" />
+        <img src="images/photo_2026-10-01_00-21-15.jpg" alt="Welcome party photo 5" class="gallery-photo" />
+        <img src="images/photo_2026-10-01_00-33-23.jpg" alt="Welcome party photo 6" class="gallery-photo" />
+      </div>
+    </div>
+  </section>
+  <!-- ===== CREATED BY SECTION ===== -->
+<section id="created-by">
+  <div class="credits-section">
+    <h3>Created by</h3>
+    <div class="credits-grid">
+      <div class="credit-card">
+        <img src="images/your-photo.jpg" alt="Rodeeeeeeeee" class="credit-photo" />
+        <b>Rodeen Khaled</b>
+      </div>
+      <div class="credit-card">
+        <img src="images/helper-photo.jpg" alt="Helper's name" class="credit-photo" />
+        <b>Ibrahim Mohahmed</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    WELCOME PARTY 2026 &middot; HIGHER INSSTITUTE OF ENGINEERING AND TECHNOLOGY - TOD
+  </footer>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

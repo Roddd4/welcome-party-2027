@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Welcome Party 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Styles used only on this admin page */
+    .admin-wrap {
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 10px;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.97);
+    }
+    .admin-lock {
+      max-width: 360px;
+      margin: 100px auto;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.97);
+    }
+    .admin-lock input {
+      width: 100%; border: 1px solid var(--border); background-color: var(--bg-alt);
+      padding: 10px 12px; font-size: 14px; margin: 16px 0; font-family: inherit;
+    }
+    .admin-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .admin-count { color: var(--text-muted); font-size: 15px; }
+    .reset-btn {
+      background-color: #b00020; color: #fff; border: none;
+      padding: 10px 20px; font-size: 13px; cursor: pointer; letter-spacing: 0.3px;
+    }
+    .reset-btn:hover { background-color: #8c0019; }
+    table { width: 100%; border-collapse: collapse; font-size: 16px; }
+    th, td { border: 1px solid var(--border); padding: 12px 14px; text-align: left; color: var(--navy); }
+    th { background-color: var(--bg-alt); color: var(--navy); text-transform: uppercase; font-size: 13px; letter-spacing: 0.5px; }
+    tr:nth-child(even) { background-color: var(--bg-alt); }
+    .empty-msg { color: var(--text-muted); text-align: center; padding: 40px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">WELCOME PARTY &middot; ADMIN</div>
+  </nav>
+
+  <!-- ===== PASSWORD GATE ===== -->
+  <!-- Simple protection: not real security, just keeps casual visitors out.
+       Change the password below (ADMIN_PASSWORD) to whatever you want. -->
+  <div id="lockScreen" class="admin-lock">
+    <h2>Admin access</h2>
+    <p style="color:var(--text-muted); font-size:13px; margin-top:6px;">Enter the password to view registrations</p>
+    <input type="password" id="passwordInput" placeholder="Password" />
+    <button class="btn" id="unlockBtn" style="width:100%; border:none; cursor:pointer;">Enter</button>
+    <p id="wrongPassword" class="hidden" style="color:#b00020; font-size:12px; margin-top:10px;">Wrong password, try again.</p>
+  </div>
+
+  <!-- ===== ADMIN CONTENT (hidden until correct password) ===== -->
+  <div id="adminContent" class="admin-wrap hidden">
+    <div class="admin-top">
+      <h2>Registrations</h2>
+      <span class="admin-count" id="regCount">Loading...</span>
+      <button class="reset-btn" id="resetBtn">Reset all data</button>
+    </div>
+
+    <table id="regTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Full name</th>
+          <th>Department</th>
+          <th>Phone</th>
+          <th>Friends</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="regTableBody">
+        <!-- Rows are added here automatically by admin.js -->
+      </tbody>
+    </table>
+
+    <p id="emptyMsg" class="empty-msg hidden">No registrations yet.</p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
